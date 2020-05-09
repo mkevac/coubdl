@@ -27,7 +27,7 @@ You will get two strings that you would need:
 
 ### Install coubdl
 
-You can download latest coubdl from releases page or use go get to install it
+You can download latest coubdl from [releases](https://github.com/mkevac/coubdl/releases) page or use go get to install it
 
 ```bash
 # go get -u github.com/mkevac/coubdl
