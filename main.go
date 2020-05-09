@@ -245,7 +245,7 @@ func saveIndexFile(coubs []CoubResponse, destinationDir string) error {
 	for no, coub := range coubs {
 		fmt.Fprintf(out, "<tr>\n")
 		fmt.Fprintf(out, "<th scope=\"row\">%d</td>\n", no)
-		fmt.Fprintf(out, "<td>%s</td>\n", coub.Title)
+		fmt.Fprintf(out, "<td><a href=\"https://coub.com/view/%s\">%s</a></td>\n", coub.Permalink, coub.Title)
 		fmt.Fprintf(out, "<td>\n")
 		for i, tag := range coub.Tags {
 			if i != 0 {
