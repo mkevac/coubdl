@@ -249,9 +249,9 @@ func saveIndexFile(coubs []CoubResponse, destinationDir string) error {
 		fmt.Fprintf(out, "<td>\n")
 		for i, tag := range coub.Tags {
 			if i != 0 {
-				fmt.Fprintf(out, ", ")
+				fmt.Fprintf(out, " ")
 			}
-			fmt.Fprintf(out, "%s", tag.Title)
+			fmt.Fprintf(out, "<div class=\"badge badge-primary\">%s</div>", tag.Title)
 		}
 		fmt.Fprintf(out, "</td>\n")
 		fmt.Fprintf(out, "<td>\n")
