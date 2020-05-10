@@ -418,6 +418,12 @@ func main() {
 	flag.IntVar(&limit, "limit", 0, "limit number of coubs to download by this number (0 - no limit)")
 	flag.Parse()
 
+	destinationDir_, err := filepath.Abs(destinationDir)
+	if err != nil {
+		log.Fatalf("error while converting destination dir '%s' to absolute path: %s", destinationDir, err)
+	}
+	destinationDir = destinationDir_
+
 	if err := populateConfig(); err != nil {
 		log.Fatalf("error while populating config: %s", err)
 	}
